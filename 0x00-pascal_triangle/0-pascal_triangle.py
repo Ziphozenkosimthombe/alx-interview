@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 
 """creating the triangle function call def pascal_triangle(n):
-     - take an integer "n" as input and returns a list representing the first "n" rows of Pascal's triangle
+     - take an integer "n" as input and returns a list
+     representing the first "n" rows of Pascal's triangle
     """
+
 
 def pascal_triangle(n):
     """checking if "n" is less than or equal to 0.
