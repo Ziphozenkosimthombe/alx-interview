@@ -17,14 +17,13 @@ def canUnlockAll(boxes):
     # return True
     # return False
     """
-    
-    if not boxes or type(boxes) is not list:
+    if not boxes or not isinstance(boxes, list):
         return False
 
     keys = [0]
     for key in keys:
         for box in boxes[key]:
-            if box not in keys and box < len(boxes):
+            if box < len(boxes) and box not in keys:
                 keys.append(box)
     if len(keys) == len(boxes):
         return True
