@@ -2,18 +2,14 @@
 
 
 def canUnlockAll(boxes):
-    visited = set()
-    # Initialize a queue to perform BFS
-    queue = [0]
+    if not boxes or type(boxes) is not list:
+        return False
 
-    # Start BFS from the first box
-    while queue:
-        box = queue.pop(0)
-        visited.add(box)
-        # Add keys from the current box to the queue
-        for key in boxes[box]:
-            if key not in visited and key < len(boxes):
-                queue.append(key)
-
-    # Check if all boxes have been visited
-    return len(visited) == len(boxes)
+    keys = [0]
+    for key in keys:
+        for box in boxes[key]:
+            if box not in keys and box < len(boxes):
+                keys.append(box)
+    if len(keys) == len(boxes):
+        return True
+    return False
