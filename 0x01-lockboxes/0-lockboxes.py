@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+
+
 def canUnlockAll(boxes):
     # Check if boxes is a list
     if not boxes:
