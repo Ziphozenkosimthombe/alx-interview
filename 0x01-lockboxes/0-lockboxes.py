@@ -17,6 +17,7 @@ def canUnlockAll(boxes):
     # return True
     # return False
     """
+    
     if not boxes or type(boxes) is not list:
         return False
 

@@ -89,13 +89,16 @@ carrie@ubuntu:~/0x01-lockboxes$
  ```py
 
  def canUnlockAll(boxes):
-    if not boxes:
+    if not boxes or type(boxes) is not list:
         return False
+
     keys = [0]
     for key in keys:
         for box in boxes[key]:
-            if box not in key and box < len(boxes):
+            if box not in keys and box < len(boxes):
                 keys.append(box)
-    return len(keys) == len(boxes)
+    if len(keys) == len(boxes):
+        return True
+    return False
  ```
 
