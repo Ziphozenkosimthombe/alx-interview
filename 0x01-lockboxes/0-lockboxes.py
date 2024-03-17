@@ -14,6 +14,7 @@ is not equal to the length of the boxes
 10. # Return False if boxes is not a list
 """
 
+
 def canUnlockAll(boxes):
     """Check if all boxes can be opened"""
     keys = [0]
@@ -24,4 +25,3 @@ def canUnlockAll(boxes):
     if len(keys) == len(boxes):
         return True
     return False
-    
