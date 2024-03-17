@@ -13,6 +13,8 @@
 10. # Return False if boxes is not a list
 """
 
+
+
 def canUnlockAll(boxes):
     if not boxes:
         return False
