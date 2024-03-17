@@ -9,10 +9,10 @@
 6. # Add the box to the keys
 7. # Check if the length of the keys is equal to the length of the boxes
 8. # Return True if the length of the keys is equal to the length of the boxes
-9. # Return False if the length of the keys is not equal to the length of the boxes
+9. # Return False if the length of the keys,
+is not equal to the length of the boxes
 10. # Return False if boxes is not a list
 """
-
 
 
 def canUnlockAll(boxes):
