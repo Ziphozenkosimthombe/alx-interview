@@ -14,13 +14,14 @@ is not equal to the length of the boxes
 10. # Return False if boxes is not a list
 """
 
-
 def canUnlockAll(boxes):
-    if not boxes:
-        return False
+    """Check if all boxes can be opened"""
     keys = [0]
     for key in keys:
         for box in boxes[key]:
             if box not in keys and box < len(boxes):
                 keys.append(box)
-    return len(keys) == len(boxes)
+    if len(keys) == len(boxes):
+        return True
+    return False
+    
