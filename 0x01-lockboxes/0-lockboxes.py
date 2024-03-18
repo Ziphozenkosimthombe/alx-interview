@@ -10,7 +10,7 @@ def canUnlockAll(boxes):
     # loop through the keys boxes
     # loop through the boxes
     # check if the box is not in the keys,
-    # list and the box is less than the length of the boxes 
+    # list and the box is less than the length of the boxes
     #append the box to the keys list
     # check if the length of the keys,
     # boxes is equal to the length of the boxes
