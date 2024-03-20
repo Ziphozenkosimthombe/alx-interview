@@ -1,21 +1,25 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
+""" Module for 0-minoperations"""
 
 
 def minOperations(n):
     """
-    # check if n is less than or equal to 1
-    # return 0
-    # create a list to store the factors
-    # loop through the range of 2 to n
-    # check if n is divisible by i
-    # append i to the list of factors
-    # return the sum of the factors
+    minOperations
+    Gets fewest # of operations needed to result in exactly n H characters
     """
-    if n <= 1:
+    # all outputs should be at least 2 char: (min, Copy All => Paste)
+    if (n < 2):
         return 0
-    factors = []
-    for i in range(2, n + 1):
-        while n % i == 0:
-            factors.append(i)
-            n = n / i
-    return sum(factors)
+    ops, root = 0, 2
+    while root <= n:
+        # if n evenly divides by root
+        if n % root == 0:
+            # total even-divisions by root = total operations
+            ops += root
+            # set n to the remainder
+            n = n / root
+            # reduce root to find remaining smaller vals that evenly-divide n
+            root -= 1
+        # increment root until it evenly-divides n
+        root += 1
+    return ops
