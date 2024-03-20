@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 def minOperations(n):
     """
     # check if n is less than or equal to 1
