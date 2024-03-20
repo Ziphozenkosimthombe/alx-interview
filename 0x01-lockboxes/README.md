@@ -100,5 +100,5 @@ carrie@ubuntu:~/0x01-lockboxes$
     if len(keys) == len(boxes):
         return True
     return False
- ```
+```
 
