@@ -58,7 +58,9 @@
 0. Minimum Operations
 
 
-In a text file, there is a single character H. Your text editor can execute only two operations in this file: Copy All and Paste. Given a number n, write a method that calculates the fewest number of operations needed to result in exactly n H characters in the file.
+In a text file, there is a single character H. Your text editor can execute only two operations in this file:
+Copy All and Paste. Given a number n, write a method that calculates the fewest number of operations needed,
+to result in exactly n H characters in the file.
 
 Prototype: def minOperations(n)
 Returns an integer
@@ -105,4 +107,19 @@ carrie@ubuntu:~/0x02-minoperations$
 # SOLUTIONS
 
 ```py
+#!/usr/bin/python3
+
+
+def minOperations(n):
+    if (n < 2):
+        return 0
+    ops, root = 0, 2
+    while root <= n:
+        if n % root == 0:
+            ops += root
+            n = n / root
+            root -= 1
+        root += 1
+    return ops
+
 ```
